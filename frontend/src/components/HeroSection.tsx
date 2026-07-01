@@ -10,17 +10,13 @@ export default function HeroSection() {
     const isDark = theme === 'dark';
     const borderColor = isDark ? 'border-gray-800' : 'border-gray-200';
     const outerTechs = [
-
-        { src: '/svg/python.svg', alt: 'Python', angle: 110, radius: 235 },
-        { src: '/svg/tensorflow.svg', alt: 'TensorFlow', angle: 260, radius: 170 },
-        { src: '/svg/git.svg', alt: 'Git', angle: 200, radius: 235 },
-    ];
-
-    const innerTechs = [
-        { src: '/svg/react.svg', alt: 'React', angle: 20, radius: 235 },
-        { src: '/svg/javascript.svg', alt: 'JavaScript', angle: 40, radius: 170 },
-        { src: '/svg/typescript.svg', alt: 'TypeScript', angle: 150, radius: 170 },
-
+        { src: '/svg/react.svg', alt: 'React' },
+        { src: '/svg/python.svg', alt: 'Python' },
+        { src: '/svg/numpy.svg', alt: 'NumPy' },
+        { src: '/svg/javascript.svg', alt: 'JavaScript' },
+        { src: '/svg/typescript.svg', alt: 'TypeScript' },
+        { src: '/svg/tensorflow.svg', alt: 'TensorFlow' },
+        { src: '/svg/git.svg', alt: 'Git' },
     ];
     return (
         <section id="home" className="px-8 pb-20 pt-32">
@@ -65,51 +61,35 @@ export default function HeroSection() {
                     <div className="absolute inset-0 rounded-full border border-white/10" />
                     <div className="absolute inset-14 rounded-full border border-white/10" />
 
-                    {outerTechs.map((tech, index) => (
-                        <div
-                            key={`${tech.alt}-${index}`}
-                            className="orbit-slot"
-                            style={
-                                {
-                                    '--angle': `${tech.angle}deg`,
-                                    '--radius': `${tech.radius}px`,
-                                    '--duration': '30s',
-                                } as React.CSSProperties
-                            }
-                        >
-                            <div className="orbit-item">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-white/10 shadow-lg backdrop-blur-md">
-                                    <img src={tech.src} alt={tech.alt} className="h-9 w-9 object-contain" />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                    {outerTechs.map((tech, index) => {
+                        const angle = (360 / outerTechs.length) * index - 90;
 
-                    {innerTechs.map((tech, index) => (
-                        <div
-                            key={`${tech.alt}-${index}`}
-                            className="orbit-slot"
-                            style={
-                                {
-                                    '--angle': `${tech.angle}deg`,
-                                    '--radius': `${tech.radius}px`,
-                                    '--duration': '30s',
-                                } as React.CSSProperties
-                            }
-                        >
-                            <div className="orbit-item">
-                                <div className="flex h-17 w-17 items-center justify-center rounded-full border border-white/15 bg-white/10 shadow-lg backdrop-blur-md">
-                                    <img src={tech.src} alt={tech.alt} className="h-7 w-7 object-contain" />
+                        return (
+                            <div
+                                key={`${tech.alt}-${index}`}
+                                className="orbit-slot"
+                                style={
+                                    {
+                                        '--angle': `${angle}deg`,
+                                        '--radius': '235px',
+                                        '--duration': '30s',
+                                    } as React.CSSProperties
+                                }
+                            >
+                                <div className="orbit-item">
+                                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-white/10 shadow-lg backdrop-blur-md">
+                                        <img src={tech.src} alt={tech.alt} className="h-9 w-9 object-contain" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
 
                     <div className="relative z-10 flex h-80 w-80 items-center justify-center overflow-hidden rounded-full border-4 border-cyan-500/40 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 shadow-2xl">
                         <img
                             src="/images/ray.png"
                             alt="Rayen Ben Cheikh"
-                            className="h-full w-full object-cover object-[50%_15%] scale-[1]"
+                            className="h-full w-full object-cover object-[50%_15%]"
                         />
                     </div>
                 </div>
