@@ -75,6 +75,11 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Containerized deployment orchestration",
       ],
       image: "/projects/devops.png",
+      screenshots: [
+        "/project/devops/ALERTS.png",
+        "/project/devops/CI_CD EKS.drawio.png",
+        "/project/devops/GLOBALAWS.png",
+      ],
     },
     {
       id: 3,
@@ -91,6 +96,11 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Mobile-first UI",
       ],
       image: "/projects/dot-it.png",
+      screenshots: [
+        "/project/moovi/1.png",
+        "/project/moovi/2.png",
+        "/project/moovi/3.png",
+      ],
     },
     {
       id: 4,
@@ -132,6 +142,12 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "90% precision on the test dataset",
       ],
       image: "/projects/heart-disease.png",
+      screenshots: [
+        "/project/heartdisease/1.png",
+        "/project/heartdisease/2.png",
+        "/project/heartdisease/3.png",
+        "/project/heartdisease/4.png",
+      ],
     },
     {
       id: 6,
@@ -155,6 +171,12 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Data visualization",
       ],
       image: "/projects/twitter-sentiment.png",
+      screenshots: [
+        "/project/twitter/1.png",
+        "/project/twitter/2.png",
+        "/project/twitter/3.png",
+        "/project/twitter/4.png",
+      ],
     },
     {
       id: 7,
@@ -178,6 +200,11 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Time-based patterns",
       ],
       image: "/projects/us-accident.png",
+      screenshots: [
+        "/project/us_accident/1.png",
+        "/project/us_accident/2.png",
+        "/project/us_accident/3.png",
+      ],
     },
   ],
   fr: [
@@ -242,6 +269,11 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Déploiement conteneurisé",
       ],
       image: "/projects/devops.png",
+      screenshots: [
+        "/project/devops/ALERTS.png",
+        "/project/devops/CI_CD EKS.drawio.png",
+        "/project/devops/GLOBALAWS.png",
+      ],
     },
     {
       id: 3,
@@ -258,6 +290,11 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Interface mobile",
       ],
       image: "/projects/dot-it.png",
+      screenshots: [
+        "/project/moovi/1.png",
+        "/project/moovi/2.png",
+        "/project/moovi/3.png",
+      ],
     },
     {
       id: 4,
@@ -299,6 +336,12 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "90 % de précision sur le jeu de test",
       ],
       image: "/projects/heart-disease.png",
+      screenshots: [
+        "/project/heartdisease/1.png",
+        "/project/heartdisease/2.png",
+        "/project/heartdisease/3.png",
+        "/project/heartdisease/4.png",
+      ],
     },
     {
       id: 6,
@@ -322,6 +365,12 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Visualisation des données",
       ],
       image: "/projects/twitter-sentiment.png",
+      screenshots: [
+        "/project/twitter/1.png",
+        "/project/twitter/2.png",
+        "/project/twitter/3.png",
+        "/project/twitter/4.png",
+      ],
     },
     {
       id: 7,
@@ -345,6 +394,11 @@ export const projectsByLanguage: Record<Language, Project[]> = {
         "Patterns temporels",
       ],
       image: "/projects/us-accident.png",
+      screenshots: [
+        "/project/us_accident/1.png",
+        "/project/us_accident/2.png",
+        "/project/us_accident/3.png",
+      ],
     },
   ],
 };

@@ -26,19 +26,26 @@ function SocialIcon({ id }: { id: string }) {
     }
 }
 
-export default function SocialLinks() {
+export default function SocialLinks({ variant = 'fixed' }: { variant?: 'fixed' | 'inline' }) {
     const { theme } = useTheme();
     const isDark = theme === 'dark';
 
+    const wrapperClass =
+        variant === 'fixed'
+            ? 'fixed left-4 top-1/2 z-40 flex -translate-y-1/2 flex-col gap-4'
+            : 'flex items-center justify-center gap-4';
+
     return (
-        <div className="fixed left-4 top-1/2 z-40 flex -translate-y-1/2 flex-col gap-4">
+        <div className={wrapperClass}>
             {socialLinks.map((link) => (
                 <a
                     key={link.id}
                     href={link.href}
                     target={link.external ? '_blank' : undefined}
                     rel={link.external ? 'noopener noreferrer' : undefined}
-                    className={`rounded-full p-3 transition ${isDark ? 'bg-gray-800/50 hover:bg-cyan-500/20' : 'bg-white/70 hover:bg-cyan-500/20'}`}
+                    aria-label={link.id}
+                    className={`rounded-full p-3 transition ${isDark ? 'bg-gray-800/50 hover:bg-cyan-500/20' : 'bg-white/70 hover:bg-cyan-500/20'
+                        }`}
                 >
                     <SocialIcon id={link.id} />
                 </a>

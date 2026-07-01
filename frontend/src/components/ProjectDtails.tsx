@@ -16,9 +16,7 @@ export default function ProjectDetailsPage() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const projectId = Number(params.id);
-    const project = projectsByLanguage[language].find(
-        (item: Project) => item.id === projectId
-    );
+    const project = projectsByLanguage[language].find((item: Project) => item.id === projectId);
 
     if (!project) {
         return <div className="p-10">Project not found.</div>;
@@ -124,9 +122,18 @@ export default function ProjectDetailsPage() {
                     onClick={() => setSelectedImage(null)}
                 >
                     <div
-                        className="relative h-[95vh] w-[95vw]"
+                        className="relative h-[90vh] w-[95vw] max-w-6xl"
                         onClick={(e) => e.stopPropagation()}
                     >
+                        <button
+                            type="button"
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute right-3 top-3 z-20 rounded-full bg-black/70 px-4 py-2 text-white hover:bg-black"
+                            aria-label="Close fullscreen preview"
+                        >
+                            ✕
+                        </button>
+
                         <img
                             src={selectedImage}
                             alt="Fullscreen preview"
