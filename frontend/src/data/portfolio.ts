@@ -83,7 +83,7 @@ export const projectsByLanguage: Record<Language, Project[]> = {
     },
     {
       id: 3,
-      title: "Dot It",
+      title: "Moovi",
       category: "Mobile Development",
       description:
         "A React Native and Firebase app to browse trending films and save favorite movies.",
@@ -277,7 +277,7 @@ export const projectsByLanguage: Record<Language, Project[]> = {
     },
     {
       id: 3,
-      title: "Dot It",
+      title: "moovi",
       category: "Développement Mobile",
       description:
         "Application React Native et Firebase pour voir les films tendance et gérer les favoris.",
