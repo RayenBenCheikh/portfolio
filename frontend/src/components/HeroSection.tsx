@@ -89,7 +89,7 @@ export default function HeroSection() {
                         <img
                             src="/images/ray.png"
                             alt="Rayen Ben Cheikh"
-                            className="h-full w-full object-cover object-[50%_15%]"
+                            className="h-full w-full object-cover object-[100%_70%]"
                         />
                     </div>
                 </div>
